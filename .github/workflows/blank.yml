@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v3.1.0
         with:
           name: Results_graphs
-          path: /home/runner/work/3_courseWork/3_courseWork
+          path: kendall_graph.png
