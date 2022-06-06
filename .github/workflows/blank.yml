@@ -24,7 +24,7 @@ jobs:
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/3_coursework:latest
       - name: send telegram message on failure
-        if: ${{ failed() }}
+        if: ${{ failure() }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
@@ -53,7 +53,7 @@ jobs:
           name: Results_graphs
           path: output
       - name: send telegram message on failure
-        if: ${{ failed() }}
+        if: ${{ failure() }}
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_TO }}
