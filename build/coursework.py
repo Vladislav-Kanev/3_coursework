@@ -214,7 +214,7 @@ def create_corr_network_pirson(returns: pd.DataFrame, threshold = 0, gamma = 0):
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
     plt.savefig("pirson_graph" + ".png", format="PNG")
 
-    plt.savefig('build/pirson_graph.png')
+    plt.savefig('pirson_graph.png')
     plt.show()
     return H
 
@@ -252,7 +252,7 @@ def create_corr_network_sign(returns: pd.DataFrame, threshold = 0, gamma = 0.1):
     plt.axis('off')
     #saves image
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
-    plt.savefig('build/sign_graph.png')
+    plt.savefig('sign_graph.png')
     plt.savefig("sign_graph" + ".png", format="PNG")
     plt.show() 
     return H
@@ -567,8 +567,5 @@ def generate_tests(data, threshold, gamma_0 = 0.5):
     mis_sign = get_MIS(G_sign)
     mis_pirson = get_MIS(G_pirson)
     mis_kendal = get_MIS(G_kendal)
-
-    
-
     pass
 

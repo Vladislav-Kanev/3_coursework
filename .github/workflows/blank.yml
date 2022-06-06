@@ -32,9 +32,9 @@ jobs:
         run: |
           pip3 install --upgrade pip 
           pip3 install -r requirements.txt
-          python3 build/coursework.py
+          python3 build/coursework.py > output.txt
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v3.1.0
         with:
           name: Results_graphs
-          path: kendall_graph.png
+          path: [kendall_graph.png, sign_graph.png, pirson_graph.png, output.txt]
