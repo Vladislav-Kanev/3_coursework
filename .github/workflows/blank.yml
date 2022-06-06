@@ -23,6 +23,19 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/3_coursework:latest
+      - name: send telegram message on failure
+        if: ${{ failed() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_FROM }}
+          message: |
+            Govnokoder: ${{ github.actor }} 
+            Shit Warehouse: ${{ github.repository }}
+            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Made a huge mistake with docker
+
+
 
   test:
     runs-on: ubuntu-20.04
@@ -39,6 +52,17 @@ jobs:
         with:
           name: Results_graphs
           path: output
+      - name: send telegram message on failure
+        if: ${{ failed() }}
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_TO }}
+          token: ${{ secrets.TELEGRAM_FROM }}
+          message: |
+            Govnokoder: ${{ github.actor }} 
+            Shit Warehouse: ${{ github.repository }}
+            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Made a huge mistake in python script
   
   notify:
     runs-on: ubuntu-20.04
@@ -50,5 +74,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_FROM }}
           message: |
-            ${{ github.actor }} ${{ github.repository }}
-            https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Govnokoder: ${{ github.actor }} 
+            Shit Warehouse: ${{ github.repository }}
+            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Added some substance successfully
