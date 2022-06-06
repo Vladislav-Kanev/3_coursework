@@ -7,9 +7,9 @@ Original file is located at
     https://colab.research.google.com/drive/1wNWIsTvA9YQJI_u0Y3wMiD4i5zD2_l5Y
 """
 
-!pip install scipy==1.7.1
+# !pip install scipy==1.7.1
 
-!pip install apimoex yfinance ffn PyPortfolioOpt
+# !pip install apimoex yfinance ffn PyPortfolioOpt
 
 import requests
 import apimoex # для скачивания котировок
