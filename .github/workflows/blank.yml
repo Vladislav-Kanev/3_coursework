@@ -28,13 +28,13 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - name: login to Dockerhub
+      - name: install dependencies 
         run: |
           pip3 install --upgrade pip 
           pip3 install -r requirements.txt
           python3 build/coursework.py
-      # - name: Upload a Build Artifact
-      #     uses: actions/upload-artifact@v3.1.0
-      #     with:
-      #       name: Results_graphs
-      #       path: /home/runner/work/3_courseWork/3_courseWork
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v3.1.0
+        with:
+          name: Results_graphs
+          path: /home/runner/work/3_courseWork/3_courseWork
