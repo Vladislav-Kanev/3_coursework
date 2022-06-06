@@ -121,7 +121,7 @@ def create_corr_network_1(G):
     # displays the graph without axis
     plt.axis('off')
     #saves image
-    plt.savefig("part1.png", format="PNG")
+    # plt.savefig("part1.png", format="PNG")
     plt.show()
 
 def create_corr_network_2(G, corr_direction, threshold = 0):
@@ -212,9 +212,9 @@ def create_corr_network_pirson(returns: pd.DataFrame, threshold = 0, gamma = 0):
     plt.axis('off')
     #saves image
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
-    plt.savefig("pirson_graph" + ".png", format="PNG")
+    plt.savefig("output/" + "pirson_graph" + ".png", format="PNG")
 
-    plt.savefig('pirson_graph.png')
+    # plt.savefig('pirson_graph.png')
     plt.show()
     return H
 
@@ -252,8 +252,8 @@ def create_corr_network_sign(returns: pd.DataFrame, threshold = 0, gamma = 0.1):
     plt.axis('off')
     #saves image
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
-    plt.savefig('sign_graph.png')
-    plt.savefig("sign_graph" + ".png", format="PNG")
+    # plt.savefig('sign_graph.png')
+    plt.savefig("output/" + "sign_graph" + ".png", format="PNG")
     plt.show() 
     return H
 
@@ -290,7 +290,7 @@ def create_corr_network_kendal(returns: pd.DataFrame, threshold = 0, gamma = 0):
     # displays the graph without axis
     plt.axis('off')
     #saves image
-    plt.savefig("kendall_graph" + ".png", format="PNG")
+    plt.savefig("output/" + "kendall_graph" + ".png", format="PNG")
     # plt.savefig('build/kendall_graph.png')
     plt.show() 
     return H
