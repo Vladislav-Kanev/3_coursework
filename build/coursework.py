@@ -212,8 +212,10 @@ def create_corr_network_pirson(returns: pd.DataFrame, threshold = 0, gamma = 0):
     plt.axis('off')
     #saves image
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
+    plt.savefig("pirson_graph" + ".png", format="PNG")
+
     plt.savefig('build/pirson_graph.png')
-    plt.show() 
+    plt.show()
     return H
 
 """#### Sign"""
@@ -251,6 +253,7 @@ def create_corr_network_sign(returns: pd.DataFrame, threshold = 0, gamma = 0.1):
     #saves image
     # plt.savefig("part2" + corr_direction + ".png", format="PNG")
     plt.savefig('build/sign_graph.png')
+    plt.savefig("sign_graph" + ".png", format="PNG")
     plt.show() 
     return H
 
@@ -287,8 +290,8 @@ def create_corr_network_kendal(returns: pd.DataFrame, threshold = 0, gamma = 0):
     # displays the graph without axis
     plt.axis('off')
     #saves image
-    # plt.savefig("part2" + corr_direction + ".png", format="PNG")
-    plt.savefig('build/kendall_graph.png')
+    plt.savefig("kendall_graph" + ".png", format="PNG")
+    # plt.savefig('build/kendall_graph.png')
     plt.show() 
     return H
 
@@ -368,29 +371,6 @@ def kendal_hypothesis(x_return, y_return, gamma, alpha):
 
     x_return = notNullReturn[x_return.name]
     y_return = notNullReturn[y_return.name]
-
-    # I = []
-    # sum = 0
-    # x_count = [0, 0]
-    # num = 0
-    # for i in range(len(notNullReturn)):    
-    #     for j in range(len(notNullReturn)):
-    #         if i == j: continue 
-    #         if ((x_return[i] - x_return[j]) * (y_return[i] - y_return[j])) >= 0:
-    #             I.append(1)
-    #             sum += 1
-    #             num += 1
-    #         else:
-    #             sum -= 1
-    #             I.append(-1)
-    # print(np.sum(I), sum / (len(I)*(len(I) - 1)))
-    # pcc = (num / len(I))**3 + ((len(I) - num) / len(I))**3
-    # corr = sum / (len(x_return) * (len(x_return) - 1))
-    # pc = (corr + 1) / 2
-    # print(corr, pc)
-    # print(pcc, pc, pc**2)
-    # T = len(y_return) * (corr - gamma) / (4 * (pcc - pc**2)**0.5)
-    # p = 1 - phi(T)
 
     tau, p = kendalltau(x_return, y_return)
 
