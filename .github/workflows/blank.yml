@@ -42,6 +42,7 @@ jobs:
   
   notify:
     runs-on: ubuntu-20.04
+    needs: [push-docker, test]
     steps:
       - name: send telegram message on push
         uses: appleboy/telegram-action@master
