@@ -14,17 +14,14 @@ Original file is located at
 import requests
 import apimoex # для скачивания котировок
 import pandas as pd # для хранения и анализа
-from tqdm import tqdm # для отслеживания прогресса 
-import tkinter
 import yfinance as yf
-import ffn
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 """### Загрузка данных"""
 
-data = pd.read_csv('drive/MyDrive/Курсовая/code/ticks2021.csv', sep=';')
+data = pd.read_csv('data/ticks2021.csv', sep=';')
 data.head()
 
 data = data.set_index('TRADEDATE')
