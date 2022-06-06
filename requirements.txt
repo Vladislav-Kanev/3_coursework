@@ -6,4 +6,4 @@ PyPortfolioOpt
 tqdm
 networkx
 seaborn
-Jinja2
+Jinja2==2.11

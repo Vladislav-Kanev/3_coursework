@@ -4,7 +4,7 @@ on: [push, pull_request, workflow_dispatch]
 
 jobs:
   push-docker:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: login to Dockerhub
@@ -25,7 +25,7 @@ jobs:
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/3_coursework:latest
 
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: login to Dockerhub
