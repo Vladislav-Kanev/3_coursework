@@ -3,3 +3,7 @@ apimoex
 yfinance 
 ffn 
 PyPortfolioOpt
+tqdm
+tkinter
+ffn
+networkx
