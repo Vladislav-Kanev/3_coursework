@@ -39,3 +39,15 @@ jobs:
         with:
           name: Results_graphs
           path: output
+  
+  notify:
+    runs-on: ubuntu-20.04
+      steps:
+        - name: send telegram message on push
+          uses: appleboy/telegram-action@master
+          with:
+            to: ${{ secrets.TELEGRAM_TO }}
+            token: ${{ secrets.TELEGRAM_FROM }}
+            message: |
+              ${{ github.actor }} ${{ github.repository }}
+              https://github.com/${{ github.repository }}/commit/${{github.sha}}
