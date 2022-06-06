@@ -15,13 +15,14 @@ import requests
 import apimoex # для скачивания котировок
 import pandas as pd # для хранения и анализа
 import yfinance as yf
+import ffn
 import numpy as np
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 """### Загрузка данных"""
 
-data = pd.read_csv('data/ticks2021.csv', sep=';')
+data = pd.read_csv('build/ticks2021.csv', sep=';')
 data.head()
 
 data = data.set_index('TRADEDATE')
@@ -544,7 +545,7 @@ createPorfolio(data, 0.25, 'kendall', 0.01, 0.1)
 
 """# Sign"""
 
-createPorfolio(data, 0.25, 'sign', threshold = 0.01, gamma = 0.1)
+createPorfolio(data, 0.25, 'sign', threshold = 0.01, gamma = 0.5)
 
 """# Проверка на устойчивость
 

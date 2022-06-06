@@ -6,3 +6,4 @@ PyPortfolioOpt
 tqdm
 networkx
 seaborn
+Jinja2
