@@ -5,3 +5,4 @@ ffn
 PyPortfolioOpt
 tqdm
 networkx
+seaborn
