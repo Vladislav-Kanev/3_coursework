@@ -30,9 +30,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_FROM }}
           message: |
-            Govnokoder: ${{ github.actor }} 
-            Shit Warehouse: ${{ github.repository }}
-            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Senor: ${{ github.actor }} 
+            Divine Repository: ${{ github.repository }}
+            Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
             Made a huge mistake with docker
 
 
@@ -59,9 +59,9 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_FROM }}
           message: |
-            Govnokoder: ${{ github.actor }} 
-            Shit Warehouse: ${{ github.repository }}
-            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Senor: ${{ github.actor }} 
+            Divine Repository: ${{ github.repository }}
+            Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
             Made a huge mistake in python script
   
   notify:
@@ -74,7 +74,7 @@ jobs:
           to: ${{ secrets.TELEGRAM_TO }}
           token: ${{ secrets.TELEGRAM_FROM }}
           message: |
-            Govnokoder: ${{ github.actor }} 
-            Shit Warehouse: ${{ github.repository }}
-            Linked to collective farm: https://github.com/${{ github.repository }}/commit/${{github.sha}}
-            Added some substance successfully
+            Senor: ${{ github.actor }}
+            Divine Repository: ${{ github.repository }}
+            Changes: https://github.com/${{ github.repository }}/commit/${{github.sha}}
+            Everything builded successfully

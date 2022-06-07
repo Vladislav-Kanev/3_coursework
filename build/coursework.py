@@ -217,7 +217,7 @@ def create_corr_network_pirson(returns: pd.DataFrame, threshold = 0, gamma = 0):
     # plt.savefig('pirson_graph.png')
     plt.show()
     return H
-gunjmfvjnijgfv
+
 """#### Sign"""
 
 def create_corr_network_sign(returns: pd.DataFrame, threshold = 0, gamma = 0.1):
